@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/logo_grd - fevicon.png">
+    <title>Yashanki Zala</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="./matter.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="./script.js"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body,html{
+          overflow-x: hidden;
+        }
+        section, div {
+          max-width: 100vw;
+          box-sizing: border-box;
+        }
+        @media (max-width: 768px) {
+          section {
+            padding: 0;
+          }
+        }
+       .lsFont {
+            font-family: "League Spartan", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .mFont {
+            font-family: "Merriweather", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .nFont {
+            font-family: "Nunito", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+        }
+        .input-line {
+            border-bottom: 2px solid #ffffff;
+            transition: border-color 0.3s ease;
+        }
+        .input-line:hover {
+            border-bottom-color: #0000ff;
+        }
+        .input-line:focus {
+            outline: none;
+            border-bottom-color: #0000ff;
+        }
+        .submit-btn {
+            background: linear-gradient(to right, #cb0e0e, #c84040);
+        }
+        .submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body class="bg-white">
+  <!-- section 1 containing header and hero starts here -->
+    <section class="flex flex-col justify-between h-screen bg-[#111]">
+        <header class="z-10 flex items-center justify-between w-full px-4 mt-2 max-w-screen-2xl mx-auto pointer-events-none">
+            <img id="logo-white" class="w-20 h-20 pointer-events-auto md:ml-10" src="./assets/logo_white.png" alt="">
+            <img id="logo-blue" class="w-20 h-20 pointer-events-auto ml-10 hidden" src="./assets/logo_blue.png" alt="">
+            <!-- nav text elements starts here -->
+            <div class="flex gap-5">
+                <div id="nav-options" class="gap-6 lsFont text-gray-400 hidden md:flex pointer-events-auto mr-20">
+                  <!-- nav1 starts here -->
+                  <a href="#projectsection" class="relative group inline-block" id="hoverElement">
+                    <span class="text-lg font-bold hover:text-white">Projects</span>
+                  
+                    <span id="hoverLine"
+                    class="absolute bottom-0 left-0 h-[3px] bg-red-500 transition-all duration-500 w-0"></span>
+                  </a>
+                  
+                  <!-- nav1 ends here -->
+                   <!-- nav2 starts here -->
+                   <a href="https://drive.google.com/file/d/1nQOn_qUOfeY2GjqwHYs4cqW-bd8T1Etp/view?usp=sharing" class="relative group inline-block" id="hoverElement2">
+                    <span class="text-lg font-bold hover:text-white">Resume</span>
+                  
+                    <span id="hoverLine2"
+                    class="absolute bottom-0 left-0 h-[3px] bg-red-500 transition-all duration-500 w-0"></span>
+                  </a>
+                  <!-- nav2 ends here -->
+                   <!-- nav3 starts here -->
+                   <a href="#profilesection" class="relative group inline-block" id="hoverElement3">
+                    <span class="text-lg font-bold hover:text-white">Profiles</span>
+                  
+                    <span id="hoverLine3"
+                    class="absolute bottom-0 left-0 h-[3px] bg-red-500 transition-all duration-500 w-0"></span>
+                  </a>
+                  <!-- nav3 ends here -->
+                   <!-- nav4 starts here -->
+                   <a href="#" class="relative group inline-block" onclick="handleMenuButtonCnt()" id="hoverElement6">
+                    <span class="text-lg font-bold hover:text-white">Contact</span>
+                  
+                    <span id="hoverLine6"
+                    class="absolute bottom-0 left-0 h-[3px] bg-red-500 transition-all duration-500 w-0"></span>
+                  </a>
+                  <!-- nav4 ends here -->
+                   <!-- Sun icon starts here -->
+                <a class="relative group cursor-pointer" id="hoverElement4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun text-white pointer-events-auto"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+
+                  <span id="hoverLine4"
+                    class="absolute bottom-0 left-0 h-[3px] bg-red-500 transition-all duration-500 w-0"></span>
+                </a>
+                <!-- sun icon ends here -->
+                 <!-- Moon icon starts here -->
+                 <a class="relative group cursor-pointer hidden md:block" id="hoverElement5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon hidden pointer-events-auto md:mr-20"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+
+                  <span id="hoverLine5"
+                    class="absolute bottom-0 left-0 h-[3px] bg-red-500 transition-all duration-500 w-0"></span>
+                </a>
+                <!-- Moon icon ends here -->
+                </div>
+                <button class="md:hidden pointer-events-auto" onclick="barClick()">
+                  <i class="fa-solid fa-bars text-white text-2xl"></i>
+                </button>
+            </div>
+            <!-- nav text elements ends here -->
+        </header>
+        <!-- header ends here -->
+         <!-- matter js canvas starts here -->
+        <div id="wrapper-canvas" class="absolute inset-0 hidden md:block max-w-full">
+        </div>
+        <!-- matter js canvas ends here -->
+         <!-- hero leftside part starts here -->
+        <div class="flex -mt-36 relative items-center">
+            <div class="w-full px-4 max-w-screen-xl mx-auto translate-x-14 translate-y-5 md:translate-x-0 md:translate-y-0">
+                <img id="logo-grd" src="./assets/logo_grd.png" class="pointer-events-none absolute top-0 -translate-y-[80px] sm:-translate-y-[180px] -translate-x-1/2 left-1/2 w-[300px] sm:w-[400px] md:w-[650px] h-auto" alt="">
+                <img id="logo-blue" src="./assets/logo_blue.png" class="pointer-events-none absolute top-0 -translate-y-[80px] sm:-translate-y-[180px] -translate-x-1/2 left-1/2 w-[300px] sm:w-[400px] md:w-[650px] h-auto hidden" alt="">
+                <div id="her0-text" class="relative ml-[2px] md:ml-12 text-white">
+                    <h1 class="text-[42px] md:text-[64px] lsFont font-bold mr-12 pointer-events-none">Yashanki Zala</h1>
+                    <p class="text-[16px] mFont italic my-4 md:my-8 pointer-events-none">AI/ML Developer</p>
+                    <button class="bg-[#4595eb] py-1 px-5 font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] nFont hover:scale-110 ease-in-out duration-100 group flex justify-center items-center" onclick="handleMenuButton()" id="about-button">About Me
+                        <svg class="fa-solid fa-arrow-right translate-x-10 group-hover:translate-x-12 ease-in-out duration-100" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" width="44" height="44" viewBox="0 0 100 125"><g transform="translate(0,-952.36218)"><path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;" d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z" fill="#fff" fill-opacity="1" stroke="white" stroke-width="2"  marker="none" visibility="visible" display="inline" overflow="visible"/></g></svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Portion after clicking 3 bars starts here -->
+            <div id="horizontalNav" class="fixed md:hidden hidden bg-white inset-0 p-3 z-30 max-w-full">
+              <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                  <img class="object-cover max-w-12 max-h-12" src="./assets/logo_white.png" alt="" />
+                </a>
+                <button class="p-2 lg:hidden" onclick="navCross()">
+                  <i class="fa-solid fa-xmark text-gray-600"></i>
+                </button>
+              </div>
+              <div class="mt-6">
+                <a href="#projectsection" onclick="navCross()" class="hover:bg-gray-50 block rounded-xl m-3 p-3 font-medium lsFont">Projects</a>
+                <a href="https://drive.google.com/file/d/1nQOn_qUOfeY2GjqwHYs4cqW-bd8T1Etp/view?usp=sharing" onclick="navCross()" class="hover:bg-gray-50 block rounded-xl m-3 p-3 font-medium lsFont">Resume</a>
+                <a href="#footersection" onclick="navCross()" class="hover:bg-gray-50 block rounded-xl m-3 p-3 font-medium lsFont">Contact</a>
+                <a href="#profilesection" onclick="navCross()" class="hover:bg-gray-50 block rounded-xl m-3 p-3 font-medium lsFont">Profile</a>
+              </div>
+              <div class="block h-[1px] bg-gray-100"></div>
+              <!-- social icons starts here -->
+              <ul class="text-gray-500 text-2xl sm:text-4xl flex justify-center mt-5">
+                <li">
+                    <a href="https://www.linkedin.com/in/yashanki-zala-124956252/" target="_blank">
+                    <i class="fa-brands fa-linkedin-in hover:text-black mx-4"></i>
+                    </a>
+                </li>
+                <li">
+                    <a href="https://github.com/YashankiZala" target="_blank">
+                        <i class="fa-brands fa-github hover:text-black mx-4"></i>
+                    </a>
+                </li>
+                <li">
+                    <a href="https://wa.me/916354363691?text=Hello!" target="_blank">
+                        <i class="fa-brands fa-whatsapp hover:text-black mx-4"></i>
+                    </a>
+                </li>
+               <li">
+                    <a href="mailto:yashanki12zala@gmail.com" target="_blank"> 
+                            <i class="fa-regular fa-envelope hover:text-black mx-4"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- social icons ends here -->
+            </div>
+             <!-- Portion after clicking 3 bars ends here -->
+            <!-- Portion after clicking about me starts here -->
+            <div id="about-section" class="fixed inset-0 hidden p-3 z-20 m-5 overflow-y-auto">
+              <div id="nav-bar" class="flex flex-col md:flex-row items-center justify-center">
+                <!-- About me section starts here -->
+                <div class="bg-[url('/assets/about.png')] bg-cover flex flex-col w-screen h-auto md:w-1/2 md:h-[580px]">
+                  <button class="p-2 text-right md:hidden" onclick="handleMenuSection()">
+                    <i class="fa-solid fa-xmark text-gray-700 text-xl mr-10 mt-10"></i>
+                  </button>
+                  <div id="text-data" class="flex flex-col ml-8 mt-10 mr-8 md:ml-16 md:mt-20 md:mr-16 text-gray-800">
+                    <h3 class="lsFont text-3xl font-bold text-gray-900">About Me.</h3>
+                    <p class="mFont mt-2 mb-4 text-sm">A MERN Stack Developer</p>
+                    <p class="mFont text-sm">
+                      I’m Yashanki Zala, a Computer Science and Engineering student at <span class="text-[#f06449]">SVNIT Surat </span>
+                      graduating in 2026, with a passion for <span class="text-[#f06449]">MERN stack </span>development and 
+                      <span class="text-[#f06449]">AI/ML</span>. I also enjoy problem-solving and constantly challenging 
+                      myself to grow in the tech space.
+                    </p>
+            
+                    <h3 class="lsFont text-3xl font-bold text-gray-900 mt-5">Education</h3>
+                    <p class="mFont mb-3 text-[13px] text-gray-700">
+                      Sardar Vallabhbhai National Institute of Technology, Surat (2022-2026)
+                    </p>
+                    <p class="mFont text-sm text-[#f06449]">
+                      Bachelor of Technology in Computer Science and Engineering
+                    </p>
+
+                    <h3 class="lsFont text-3xl font-bold text-gray-900 mt-5">Skills</h3>
+
+                  <p class="mFont mb-3 text-sm text-gray-900"><span class="mFont text-sm text-[#f06449]">Languages:</span>C++, Python, Java, JavaScript</p>
+                    <p class="mFont mb-3 text-sm text-gray-900"><span class="mFont text-sm text-[#f06449]">Web Development:</span>HTML, CSS, JavaScript, Tailwind CSS, React, Node js, MongoDB, Express js</p>
+                    <p class="mFont mb-3 text-sm text-gray-900"><span class="mFont text-sm text-[#f06449]">Others:</span>DBMS, DSA, OOPs, CN, Jupiter Notebook, Git, GitHub, Canva, Figma </p>
+                    <p class="mFont mb-3 text-sm text-gray-900"><span class="mFont text-sm text-[#f06449]">Soft Skills:</span>Leadership, Team work, Problem Solving, Adaptibility</p>
+                  </div>
+                </div>
+                <!-- About me section ends here -->
+            
+                <!-- Contact section starts here -->
+                <div class="bg-[url('/assets/contact.png')] bg-cover flex flex-col w-screen h-auto md:w-1/2 md:h-[580px]">
+                  <button class="p-2 text-right hidden md:block" onclick="handleMenuSection()">
+                    <i class="fa-solid fa-xmark text-gray-300 text-xl mr-10 mt-10"></i>
+                  </button>
+                  <div id="text-data" class="flex flex-col ml-8 mt-10 mr-8 md:ml-16 md:mr-16 text-gray-800">
+                    <h3 class="lsFont text-3xl font-bold text-gray-300">Let's connect.</h3>
+                    <form id="contact-form" class="w-full max-w-lg px-4 space-y-6" name="contactUs" netlify>
+                      <div class="input relative">
+                        <h4 class="lsFont text-sm text-gray-200 mt-4">Name *</h4>
+                        <input type="text" id="name" name="name" class="w-full input-line bg-transparent text-gray-400 py-2 text-base mFont" required>
+                      </div>
+                      <div class="input relative">
+                        <h4 class="lsFont text-sm text-gray-200 mt-4">Email *</h4>
+                        <input type="email" id="email" name="email" class="w-full input-line bg-transparent text-gray-400 py-2 text-base mFont" required>
+                      </div>
+                      <div class="input relative">
+                        <h4 class="lsFont text-sm text-gray-200 mt-4">Message *</h4>
+                        <textarea id="message" name="message" class="w-full input-line bg-transparent text-gray-400 py-2 text-base mFont" required></textarea>
+                      </div>
+                      <div class="flex">
+                        <button type="submit" class="submit-btn text-white py-2 px-8 font-bold text-lg lsFont" disabled>Send Message</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- Contact section ends here -->
+              </div>
+            </div>            
+            <!-- Portion after clicking about me ends here -->
+             <!-- social icons for big screen starts here -->
+            <ul id="sociaBicons" class="ml-auto -mr-2 space-y-6 text-[#b0b2c3] text-2xl absolute right-8">
+                <li class="hidden md:block">
+                    <a href="https://www.linkedin.com/in/yashanki-zala-124956252/" target="_blank">
+                    <i id="socialB1" class="fa-brands fa-linkedin-in hover:text-white"></i>
+                    </a>
+                </li>
+                <li class="hidden md:block">
+                    <a href="https://github.com/YashankiZala" target="_blank">
+                        <i id="socialB1" class="fa-brands fa-github hover:text-white"></i>
+                    </a>
+                </li>
+                <li class="hidden md:block">
+                    <a href="https://wa.me/916354363691?text=Hello!" target="_blank">
+                        <i id="socialB1" class="fa-brands fa-whatsapp hover:text-white"></i>
+                    </a>
+                </li>
+               <li class="hidden md:block">
+                    <a href="mailto:yashanki12zala@gmail.com" target="_blank"> 
+                            <i id="socialB1" class="fa-regular fa-envelope hover:text-white"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- social icons for big screen ends here -->
+        </div>
+        <!-- hero leftside part ends here -->
+        <!-- project button part starts here -->
+        <div class="flex flex-col justify-center items-center group self-center z-10">
+            <button class="text-white bg-[#4595eb] py-2 px-5 font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] font-[Nunito] self-center hover:opacity-85 ease-in-out duration-700 mb-20 -translate-x-6 md:-translate-x-0 md:mb-2"><a href="#projectsection">Projects</a></button>
+            <svg class="hidden sm:group-hover:block group-hover:translate-y-2 rotate-90 ease-in-out duration-700" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" width="44" height="44" viewBox="0 0 100 125"><g transform="translate(0,-952.36218)"><path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;" d="m 88.999835,1002.3621 c 0,-0.4628 -0.2799,-1.0773 -0.5639,-1.3755 l -15.9997,-17.00026 c -0.747,-0.7723 -1.9572,-0.8618 -2.8281,-0.078 -0.7786,0.7007 -0.798,2.0673 -0.078,2.8282 l 12.8435,13.62516 -69.37347,0 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2.0001 2,2.0001 l 69.37347,0 -12.8435,13.6252 c -0.7199,0.7608 -0.6688,2.0938 0.078,2.8281 0.7885,0.7752 2.0925,0.7062 2.8281,-0.078 l 15.9997,-17.0002 c 0.4701,-0.4611 0.556,-0.9052 0.5639,-1.3748 z" fill="#fff" fill-opacity="1" stroke="white" stroke-width="2"  marker="none" visibility="visible" display="inline" overflow="visible"/></g></svg>
+        </div>
+        <!-- project button part ends here -->
+    </section>
+    <!-- section 1 containing header and hero ends here -->
+    <!-- section 2 for projects starts here -->
+    <section class="-translate-y-24 bg-white">
+        <a name="projectsection"></a>
+        <!-- Bento Grid starts here -->
+        <div id="bento-grid" class="container">
+          <div class="flex flex-col items-center justify-center">
+            <p class="mFont text-sm font-bold text-yellow-950">Code to solve Problems</p>
+            <p class="lsFont font-bold text-4xl md:text-6xl mt-4 mb-6 text-gray-800">My Projects</p>
+          </div>
+            <div id="grid-container" class="flex flex-col gap-6 lg:grid grid-cols-3"  style="grid-auto-rows: 96px;">
+              <!-- 1st gradient box -->
+              <div
+                class="group row-start-1 row-end-3 rounded-2xl gradient-hover-outer"
+              >
+                <div
+                  class="rounded-2xl w-full h-full p-6 flex flex-col items-center gap-4 gradient-hover-inner"
+                >
+                <h3 class="text-2xl">Face Recognition</h3>
+                <img class="rounded-xl border-2 border-gray-300 h-28" src="./assets/face.jpg" alt=""/>
+                <div class="flex justify-between w-full h-auto -mt-5">
+                  <a href="https://yashankizala.github.io/GWOC-2024/" target="_blank" class="lsFont text-gray-600 ml-2 hover:text-gray-900">Live Demo</a>
+                  <a href="https://github.com/YashankiZala/GWOC-2024" class="lsFont text-gray-600 mr-2 hover:text-gray-900">GitHub</a>
+                </div>
+                </div>
+              </div>
+              <!-- 2nd gradient box -->
+              <div
+                class="group row-start-1 row-end-4 rounded-2xl gradient-hover-outer"
+              >
+                <div
+                  class="rounded-2xl w-full h-full p-6 flex flex-col items-center gap-4 gradient-hover-inner"
+                >
+                  <h3 class="text-2xl">Mudberry Studio</h3>
+                  <img class="rounded-xl border-2 border-gray-300" src="./assets/mudberry.png" alt=""/>
+                  <div class="flex justify-between w-full h-auto mt-[18px]">
+                    <a href="https://yashankizala.github.io/GWOC-2024/" target="_blank" class="lsFont text-gray-600 ml-2 hover:text-gray-900">Live Demo</a>
+                    <a href="https://github.com/YashankiZala/GWOC-2024" class="lsFont text-gray-600 mr-2 hover:text-gray-900">GitHub</a>
+                  </div>
+                </div>
+              </div>
+              <!-- 3rd gradient box -->
+              <div
+                class="group row-start-1 row-end-3 rounded-2xl gradient-hover-outer"
+              >
+                <div
+                  class="rounded-2xl w-full h-full p-6 flex flex-col items-center gap-4 gradient-hover-inner"
+                >
+                  <h3 class="text-2xl">Todo-list
+                  </h3>
+                  <img class="rounded-xl border-2 border-gray-300 h-28" src="https://tse3.mm.bing.net/th?id=OIP.1_5gKB8i2JjDTwIBOSNVLAHaJl&pid=Api&P=0&h=180" alt=""/>
+                <div class="flex justify-between w-full h-auto ">
+                  <a href="https://github.com/YashankiZala/todo_List" class="lsFont text-gray-600 ml-2 hover:text-gray-900 -mt-5">GitHub</a>
+                </div>
+                </div>
+              </div>
+              <!-- 4th gradient box -->
+              <div
+                class="group row-start-3 row-end-6 rounded-2xl gradient-hover-outer"
+              >
+                <div
+                  class="rounded-2xl w-full h-full p-6 flex flex-col items-center gap-4 gradient-hover-inner"
+                >
+                <h3 class="text-2xl">Handwritten Digit Classification</h3>
+                <img class="rounded-xl border-2 border-gray-300 h-58" src="./assets/handwritten.png" alt=""/>
+                <div class="flex justify-between w-full h-auto ">
+                  <a href="https://drive.google.com/file/d/1nFbmgtgSkdrcxYhfKa7uJ-Xyylai9hA4/view?usp=sharing" target="_blank" class="lsFont text-gray-600 ml-2 hover:text-gray-900">Video</a>
+                  <a href="https://github.com/YashankiZala/handwritten_digit_classification" class="lsFont text-gray-600 mr-2 hover:text-gray-900">GitHub</a>
+                </div>
+                </div>
+              </div>
+              <!-- 5th gradient box -->
+              <div
+                class="group row-start-4 row-end-6 rounded-2xl gradient-hover-outer"
+              >
+                <div
+                  class="rounded-2xl w-full h-full p-6 flex flex-col items-center gap-4 gradient-hover-inner"
+                >
+                  <h3 class="text-2xl">Customizable look and feel</h3>
+                  <img
+                    src="https://www.todesktop.com/cdn-cgi/image/width=320,height=105,f=auto,fit=cover/feature-images/look-and-feel@3x.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- 6th gradient box -->
+              <div
+                class="group row-start-3 row-end-6 rounded-2xl gradient-hover-outer"
+              >
+                <div
+                  class="rounded-2xl w-full h-full p-6 flex flex-col items-center gap-4 gradient-hover-inner"
+                >
+                <h3 class="text-2xl">Quiz Application</h3>
+                <img class="rounded-xl border-2 border-gray-300" src="./assets/quiz.png" alt=""/>
+                <div class="flex justify-between w-full h-auto ">
+                  <a href="https://github.com/YashankiZala/handwritten_digit_classification" class="lsFont text-gray-600 ml-2 hover:text-gray-900 mt-7">GitHub</a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Bento Grid ends here -->
+    </section>
+    <!-- section 2 for projects ends here -->
+    <!-- section 3 for profiles starts here -->
+    <section class="bg-white">
+      <a name="profilesection"></a>
+      <div class="flex flex-col items-center justify-center">
+        <p class="mFont text-sm font-bold text-yellow-950">Coding World</p>
+        <p class="lsFont font-bold text-4xl md:text-6xl mt-4 mb-6 text-gray-800">Coding Profiles</p>
+      </div>
+        <div class="flex w-full flex-wrap min-h-80">
+          <!-- profile 1 starts here -->
+            <div class="profile-card relative flex flex-col w-full lg:w-1/4 bg-cover bg-[url('/assets/1.png')] lg:bg-[url('/assets/shadebg.png')] group overflow-hidden transition-all cursor-pointer">
+                <!-- Moving red frame below all text and images -->
+                <div class="absolute inset-0 bg-transparent z-0">
+                    <div class="absolute left-[-100%] top-0 h-full w-full bg-[#dda6a6] transition-transform duration-500 group-hover:translate-x-full"></div>
+                </div>
+    
+                <!-- Leetcode logo with hover scale effect -->
+                <a href="https://leetcode.com/u/yashanki_b_zala/" target="_blank">
+                  <img class="leetcode-logo max-w-[150px] max-h-[150px] mx-auto my-4 object-cover transition-transform duration-300 group-hover:scale-110 z-10 relative" 
+                    src="https://cdn.iconscout.com/icon/free/png-512/leetcode-3628885-3030025.png" alt="Leetcode Icon">
+                </a>
+                
+                <!-- Text and vertical line -->
+                <div class="Text flex gap-4 p-4 z-10 relative">
+                    <div>
+                        <p class="lsFont text-sm font-medium">- LEETCODE</p>
+                        <p class="mFont text-xs text-gray-800 font-normal ml-1">210+ Problems, Max R: 1477, Current R: 1447</p>
+                    </div>
+                    <div class="flex-col items-center hidden lg:flex">
+                        <!-- Translate 01 and vertical line together -->
+                        <span class="mFont text-xs rotate-90 transition-all duration-300 group-hover:-translate-y-2">01</span>
+                        <div class="vertical-line w-[2px] h-8 bg-black transition-all duration-300 group-hover:h-12 group-hover:-translate-y-2"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- profile 1 ends here -->
+            <!-- profile 2 starts here -->
+            <div class="profile-card relative flex flex-col w-full lg:w-1/4 bg-cover bg-[url('/assets/2.png')] lg:bg-[url('/assets/shadebg.png')] group overflow-hidden transition-all cursor-pointer">
+                <!-- Moving red frame below all text and images -->
+                <div class="absolute inset-0 bg-transparent z-0">
+                    <div class="absolute left-[-100%] top-0 h-full w-full bg-[#dda6a6] transition-transform duration-500 group-hover:translate-x-full"></div>
+                </div>
+    
+                <!-- Codeforces logo with hover scale effect -->
+                <a href="https://codeforces.com/profile/yashanki2579" target="_blank">
+                  <img class="codeforces-logo max-w-[150px] max-h-[150px] mx-auto my-4 object-cover transition-transform duration-300 group-hover:scale-110 z-10 relative" 
+                    src="https://cdn.iconscout.com/icon/free/png-256/code-forces-3628695-3029920.png" alt="codeforces Icon">
+                </a>
+                
+                <!-- Text and vertical line -->
+                <div class="Text flex gap-4 p-4 z-10 relative">
+                    <div>
+                        <p class="lsFont text-sm font-medium">- CODEFORCES</p>
+                        <p class="mFont text-xs text-gray-800 font-normal ml-1">50+ Problems, Max R: 933, Current R: 933</p>
+                    </div>
+                    <div class="flex-col items-center hidden lg:flex">
+                        <!-- Translate 01 and vertical line together -->
+                        <span class="mFont text-xs rotate-90 transition-all duration-300 group-hover:-translate-y-2">02</span>
+                        <div class="vertical-line w-[2px] h-8 bg-black transition-all duration-300 group-hover:h-12 group-hover:-translate-y-2"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- profile 2 ends here -->
+            <!-- profile 3 starts here -->
+            <div class="profile-card relative flex flex-col w-full lg:w-1/4 bg-cover bg-[url('/assets/3.png')] lg:bg-[url('/assets/shadebg.png')] group overflow-hidden transition-all cursor-pointer">
+                <!-- Moving red frame below all text and images -->
+                <div class="absolute inset-0 bg-transparent z-0">
+                    <div class="absolute left-[-100%] top-0 h-full w-full bg-[#dda6a6] transition-transform duration-500 group-hover:translate-x-full"></div>
+                </div>
+    
+                <!-- github logo with hover scale effect -->
+                <a href="https://github.com/YashankiZala" target="_blank">
+                  <img class="github-logo max-w-[150px] max-h-[150px] mx-auto my-4 object-cover transition-transform duration-300 group-hover:scale-110 z-10 relative" 
+                    src="https://pngimg.com/uploads/github/github_PNG40.png" alt="github Icon">
+                </a>
+                
+                <!-- Text and vertical line -->
+                <div class="Text flex gap-4 p-4 z-10 relative">
+                    <div>
+                        <p class="lsFont text-sm font-medium">- GITHUB</p>
+                        <p class="mFont text-xs text-gray-800 font-normal ml-1">Explore to see all my projects</p>
+                    </div>
+                    <div class="flex-col items-center lg:ml-24 hidden lg:flex">
+                        <!-- Translate 01 and vertical line together -->
+                        <span class="mFont text-xs rotate-90 transition-all duration-300 group-hover:-translate-y-2">03</span>
+                        <div class="vertical-line w-[2px] h-8 bg-black transition-all duration-300 group-hover:h-12 group-hover:-translate-y-2"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- profile 3 ends here -->
+            <!-- profile 4 starts here -->
+            <div class="profile-card relative flex flex-col w-full lg:w-1/4 bg-cover bg-[url('/assets/4.png')] lg:bg-[url('/assets/shadebg.png')] group overflow-hidden transition-all cursor-pointer">
+                <!-- Moving red frame below all text and images -->
+                <div class="absolute inset-0 bg-transparent z-0">
+                    <div class="absolute left-[-100%] top-0 h-full w-full bg-[#dda6a6] transition-transform duration-500 group-hover:translate-x-full transition: .4s cubic-bezier(.52,.01,.16,1);"></div>
+                </div>
+    
+                <!-- GeeksForGeeks logo with hover scale effect -->
+                 <a href="https://www.geeksforgeeks.org/user/yashankimpil/" target="_blank">
+                  <img class="leetcode-logo max-w-[150px] max-h-[150px] md:max-w-[297px] md:max-h-[150px] mx-auto my-4 object-cover transition-transform duration-300 group-hover:scale-110 z-10 relative" 
+                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgebvTMxgPxceu4oOUW8qZX1JXz1Wq8JP7ZRrNt_A0WMR6bXGOMJneJXxgCMo8IQ4b1mHE3WsVVWTiSnCP5sCQoQ_lGfZ7-kdJswcpXyE7dL34pYZ3RfG2daPZ6g6yokT9e6-98NNZrbA7e6spS_poUlyfZDLBYLljqz5qzz_6qvlUdgrGI37-_nPJr/s1280/1280px-GeeksforGeeks.svg.png" alt="GeeksForGeeks Icon">
+                 </a>
+                
+                <!-- Text and vertical line -->
+                <div class="Text flex gap-4 p-4 z-10 relative">
+                    <div>
+                        <p class="lsFont text-sm font-medium">- GeeksForGeeks</p>
+                        <p class="mFont text-xs text-gray-800 font-normal ml-1">Beginner</p>
+                    </div>
+                    <div class="flex-col items-center lg:ml-40 hidden lg:flex">
+                      <!-- Translate 01 and vertical line together -->
+                      <span class="mFont text-xs rotate-90 transition-all duration-300 group-hover:-translate-y-2">04</span>
+                      <div class="vertical-line w-[2px] h-8 bg-black transition-all duration-300 group-hover:h-12 group-hover:-translate-y-2"></div>
+                  </div>
+                </div>
+            </div>            
+            <!-- profile 4 ends here -->
+        </div>
+    </section>
+    <!-- section 3 for profiles ends here -->
+    <!-- footer starts here     -->
+    <footer class="flex items-center flex-col justify-center bg-[#111]">
+      <a name="footersection"></a>
+      <div class="mt-16 relative group">
+        <a href="#" class="relative inline-block">
+          <img src="./assets/logo_white.png" class="h-20 w-20" alt="Logo">
+          
+          <!-- Tooltip text -->
+          <span class="lsFont absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 px-2 py-1 text-white text-base rounded-md transition-all duration-300 group-hover:left-full group-hover:opacity-100 group-hover:-translate-x-0">
+            Top
+          </span>
+        </a>
+      </div>      
+        <ul class="flex gap-4 md:gap-6 lsFont text-white">
+          <a href="https://www.linkedin.com/in/yashanki-zala-124956252/" class="relative group inline-block" target="_blank" id="hoverElement7">
+            <span class="text-base md:text-lg font-bold">Linkedin</span>
+          
+            <span id="hoverLine7"
+            class="absolute bottom-0 left-0 h-[3px] bg-red-500 transition-all duration-500 w-0"></span>
+          </a>
+          <a href="https://github.com/YashankiZala" class="relative group inline-block" target="_blank" id="hoverElement8">
+            <span class="text-base md:text-lg font-bold">Github</span>
+          
+            <span id="hoverLine8"
+            class="absolute bottom-0 left-0 h-[3px] bg-red-500 transition-all duration-500 w-0"></span>
+          </a>
+          <a href="https://wa.me/916354363691?text=Hello!" target="_blank" class="relative group inline-block" id="hoverElement9">
+            <span class="text-base md:text-lg font-bold">Whatspp</span>
+          
+            <span id="hoverLine9"
+            class="absolute bottom-0 left-0 h-[3px] bg-red-500 transition-all duration-500 w-0"></span>
+          </a>
+          <a href="mailto:yashanki12zala@gmail.com" target="_blank" class="relative group inline-block" id="hoverElement10">
+            <span class="text-base md:text-lg font-bold">Email</span>
+          
+            <span id="hoverLine10"
+            class="absolute bottom-0 left-0 h-[3px] bg-red-500 transition-all duration-500 w-0"></span>
+          </a>
+        </ul>
+        <p class="text-gray-500 text-xs mt-6 mb-6 mFont">Yashanki Zala © 2024</p>
+    </footer>
+    <!-- footer ends here     -->
+    
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.min.js"></script>
+   <script src="https://cdn/jsdelivr.net/npm/matter-wrap@0.2.0/build/matter-wrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js"></script>
+  </body>
+  
+</body>
+</html>
